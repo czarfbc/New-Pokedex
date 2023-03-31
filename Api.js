@@ -20,7 +20,8 @@ const FetchGenus = async (pokemon) => {
 const Renderpokemon = async (pokemon)=>{
     const data = await FetchPokemon(pokemon);
     if(data){
-        
+
+        console.log(data['sprites']['versions']['generation-v']['black-white']['animated']['front_default']) 
         console.log(`id: ${data.id} name: ${data.name}`)
         await FetchGenus(pokemon)
         console.log(`ability: ${data.abilities[0].ability.name}`)

@@ -11,81 +11,137 @@ body
     text-align: center
     
 }
-    main{
-        display: inline-block;
-        margin: 2% 0 10% 0; 
-        padding: 15px;
-        position: relative;
+main{
+    display: inline-block;
+    margin: 2% 0 10% 0; 
+    padding: 15px;
+    position: relative;
 
-        .pokedex{
-            width: 100%;
-            
-        }
+    .pokemon_sprite{
+        position: absolute;
+        bottom: 50%;
+        left: 32%;
+        transform: translate(-63%, 20%);
+        height: 18%;
+    }
 
-        .pokemon_img{
-            position: absolute;
-            bottom: 55%;
-            left: 50%;
-            transform: translate(-63%, 20%);
-            height: 18%;
-        }
+    .pokedex{
+        width: 100%;
+    }
 
-        .pokemon_data{
-            position: absolute;
-            font-weight: 600;
-            color: #424242;
-            bottom: 37.5%;
-            left: 30%;
-            font-size: clamp(8px, 5vw, 18px);
+    .pokemon_img{
+        position: absolute;
+        bottom: 55%;
+        left: 50%;
+        transform: translate(-63%, 20%);
+        height: 18%;
+    }
 
-            .pokemon_nome{
-                color: #3a444d;
-                text-transform: capitalize;
-            }
-        }
+    .pokemon_data{
+        position: absolute;
+        font-weight: 600;
+        color: #424242;
+        bottom: 37.5%;
+        left: 30%;
+        font-size: clamp(8px, 5vw, 18px);
 
-        .form{
-            position: absolute;
-            width: 65%;
-            top: 66%;
-            left: -2.5%;
-
-            .input_search{
-                width: 50%;
-                padding: 2%;
-                outline: none;
-                border: 2px solid #333;
-                border-radius: 5px;
-                font-weight: 600;
-                color: #3a444d;
-                font-size: clamp(16px, 5vw, 1rem);
-                box-shadow: -3px 4px 0 #888, -5px 7px 0 #333;
-            }
-        }
-
-        .btns{
-            position: absolute;
-            bottom: 16%;
-            left: 32%;
-            width: 35%;
-            transform: translate(-57%, 0);
-            display: flex;
-            gap: 20px;
-        
-            .btn{
-                width: 33.33%;
-                padding: 3%;
-                border: 2px solid #000;
-                border-radius: 5px;
-                font-size: clamp(16px, 5vw, 1rem);
-                font-weight: 600;
-                color: white;
-                background-color: #444;
-                box-shadow: -2px 3px 0 #222, -4px 6px #000;
-            }
-            .btn:active{
-                box-shadow: inset -4px 4px #222;
-                font-size: 1.2rem;
-            }
+        .pokemon_nome{
+            color: #3a444d;
+            text-transform: capitalize;
         }
     }
+
+    .form{
+        position: absolute;
+        width: 65%;
+        top: 66%;
+        left: -2.5%;
+
+        .input_search{
+            width: 50%;
+            padding: 2%;
+            outline: none;
+            border: 2px solid #333;
+            border-radius: 5px;
+            font-weight: 600;
+            color: #3a444d;
+            font-size: clamp(16px, 5vw, 1rem);
+            box-shadow: -3px 4px 0 #888, -5px 7px 0 #333;
+        }
+    }
+
+    .btns{
+        position: absolute;
+        bottom: 16%;
+        left: 32%;
+        width: 35%;
+        transform: translate(-57%, 0);
+        display: flex;
+        gap: 20px;
+    
+        .btn{
+            width: 33.33%;
+            padding: 3%;
+            border: 2px solid #000;
+            border-radius: 5px;
+            font-size: clamp(16px, 5vw, 1rem);
+            font-weight: 600;
+            color: white;
+            background-color: #444;
+            box-shadow: -2px 3px 0 #222, -4px 6px #000;
+        }
+        .btn:active{
+            box-shadow: inset -4px 4px #222;
+            font-size: 1.2rem;
+        }
+    }
+    
+    .infos
+    {
+        position: absolute;
+
+        top: 30%;
+        right: 8%;
+        width: 34.5%;
+        height: 37.5%;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 2px;
+        grid-row-gap: 10px;
+        //align-items: center;
+        padding: 5px 0;
+
+        .flex
+        {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 5px 2px;
+        }
+        h3
+        {
+            font-weight: 600;
+        }
+        .genus
+        {
+            grid-area: 1 / 1 / 2 / 2;
+     
+        }
+        .ability
+        {
+            grid-area: 1 / 2 / 2 / 3;
+          
+        }
+        .types
+        {
+            grid-area: 2 / 1 / 3 / 3;
+            
+        }
+        .weaknesses
+        {
+            grid-area: 3 / 1 / 4 / 3;
+            
+        }
+    }
+}

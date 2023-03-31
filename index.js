@@ -19,7 +19,7 @@ app.set('views', path.join(__dirname, '/pages'));
 app.get('/',(req,res)=>{
 
     res.render('index',{});
-    Renderpokemon(7)
+    Renderpokemon(3)
     
 });
 

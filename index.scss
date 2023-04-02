@@ -43,7 +43,23 @@ main{
         color: #424242;
         bottom: 37.5%;
         left: 27%;
-        font-size: clamp(8px, 5vw, 18px);
+        font-size: 1.8rem;
+
+        @media screen and (max-width:768px) {
+            font-size: 1.4rem;
+        }
+        @media screen and (max-width:555px) {
+            font-size: 1.3rem;
+        }
+        @media screen and (max-width:480px) {
+            font-size: 1.1rem;
+        }
+        @media screen and (max-width:400px) {
+            font-size: 0.9rem;
+        }
+        @media screen and (max-width:340px) {
+            font-size: 0.7rem;
+        }
 
         .pokemon_nome{
             color: #3a444d;
@@ -57,6 +73,10 @@ main{
         top: 66%;
         left: -2.5%;
 
+        @media screen and (max-width:450px) {
+            left: -2%;
+        }
+
         .input_search{
             width: 50%;
             padding: 2%;
@@ -65,8 +85,23 @@ main{
             border-radius: 5px;
             font-weight: 600;
             color: #3a444d;
-            font-size: clamp(16px, 5vw, 1rem);
+            font-size: 1.6rem;
             box-shadow: -3px 4px 0 #888, -5px 7px 0 #333;
+
+            @media screen and (max-width:768px) {
+                font-size: 1.4rem;
+            }
+            @media screen and (max-width:505px) {
+                font-size: 1.1rem;
+            }
+            @media screen and (max-width:450px) {
+                padding: 1%;
+            }
+            @media screen and (max-width:400px) {
+                font-size: 0.8rem;
+                box-shadow: -1px 2px 0 #888, -2px 5px 0 #333;
+            }
+
         }
     }
 
@@ -78,21 +113,57 @@ main{
         transform: translate(-57%, 0);
         display: flex;
         gap: 20px;
-    
+
+        @media screen and (max-width:500px) {
+            left: 33%;
+            gap: 3px;
+        }
+
         .btn{
             width: 33.33%;
             padding: 3%;
             border: 2px solid #000;
             border-radius: 5px;
-            font-size: clamp(16px, 5vw, 1rem);
+            font-size: 1.6rem;
             font-weight: 600;
             color: white;
             background-color: #444;
             box-shadow: -2px 3px 0 #222, -4px 6px #000;
+
+            @media screen and (max-width:768px) {
+                font-size: 1.2rem;
+            }
+            @media screen and (max-width:615px) {
+                padding: 2% 0;
+            }
+            @media screen and (max-width:505px) {
+                font-size: 1.1rem;
+            }
+            @media screen and (max-width:450px) {
+                font-size: 0.9rem;
+                box-shadow: -2px 1px 0 #222, -4px 3px #000;
+            }
+            @media screen and (max-width:400px) {
+                font-size: 0.7rem;
+            }
+
         }
         .btn:active{
             box-shadow: inset -4px 4px #222;
             font-size: 1.2rem;
+
+            @media screen and (max-width:768px) {
+                font-size: 1rem;
+            }
+            @media screen and (max-width:505px) {
+                font-size: 0.95rem;
+            }
+            @media screen and (max-width:450px) {
+                font-size: 0.8rem;
+            }
+            @media screen and (max-width:400px) {
+                font-size: 0.6rem;
+            }
         }
     }
     
@@ -110,8 +181,30 @@ main{
         grid-template-rows: repeat(3, 1fr);
         grid-column-gap: 2px;
         grid-row-gap: 10px;
-        //align-items: center;
         padding: 5px 0;
+        @media screen and (max-width:400px) {
+            grid-row-gap: 0px;
+        }
+
+
+        h2 
+        {
+            font-size: 1.5rem;
+
+            @media screen and (max-width:555px) {
+                font-size: 1.3rem;
+            }
+            @media screen and (max-width:480px) {
+                font-size: 1.1rem;
+            }
+            @media screen and (max-width:450px) {
+                font-size: 0.9rem;
+            }
+            @media screen and (max-width:400px) {
+                font-size: 0.7rem; 
+            }
+
+        }
 
         .flex
         {
@@ -122,6 +215,18 @@ main{
         h3
         {
             font-weight: 600;
+            @media screen and (max-width:555px) {
+                font-size: 1rem;
+            }
+            @media screen and (max-width:480px) {
+                font-size: 0.9rem;
+            }
+            @media screen and (max-width:450px) {
+                font-size: 0.7rem;
+            }
+            @media screen and (max-width:400px) {
+                font-size: 0.6rem; 
+            }
         }
         .genus
         {
@@ -158,15 +263,22 @@ footer
     text-align: center;
     padding: 0 10px;
 
+    @media screen and (max-width:500px) {
+        flex-direction: column;
+    }
     p
     {
         font-weight: 600;
-        font-size: 18px;
+        font-size: 1.8rem;
+        @media screen and (max-width:500px) {
+            font-size: 1rem;
+        }
     }
 
     a
     {
         text-decoration: none;
         color: #000;
+        
     }
 }

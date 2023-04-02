@@ -41,10 +41,10 @@ const InfoPokemon = async (pokemon) => {
         const dataWeaknesses = await weaknesses.json()
         const nameWeaknessesArray = dataWeaknesses.damage_relations.double_damage_from;
 
-        spritePokemon.src = dataAPI['sprites']['versions']['generation-v']['black-white']['animated']['front_default']
+        spritePokemon.src = await dataAPI['sprites']['versions']['generation-v']['black-white']['animated']['front_default']
         spritePokemon.style.display = 'block';
 
-        namePokemon.innerHTML = dataAPI.name.toUpperCase();
+        namePokemon.innerHTML = dataAPI.name[0].toUpperCase() + dataAPI.name.substring(1);
         idPokemon.innerHTML = dataAPI.id;
 
 

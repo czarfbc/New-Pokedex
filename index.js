@@ -44,7 +44,7 @@ const InfoPokemon = async (pokemon) => {
         spritePokemon.src = await dataAPI['sprites']['versions']['generation-v']['black-white']['animated']['front_default']
         spritePokemon.style.display = 'block';
         if(searchPokemon >= 650){
-            spritePokemon.src = await dataAPI['sprites']['versions']['generation-v']['black-white']['front_default']
+            spritePokemon.src = dataAPI['sprites']['versions']['generation-v']['black-white']['front_default']
         }
 
         namePokemon.innerHTML = dataAPI.name[0].toUpperCase() + dataAPI.name.substring(1);
